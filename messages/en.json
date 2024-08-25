@@ -1,0 +1,66 @@
+{
+    "global": {
+        "overview": "Overview",
+        "egp": "EGP",
+        "bed": "bed",
+        "bath": "bath",
+        "sqft": "m2",
+        "reference": "Reference",
+        "bedroom": "Bedroom",
+        "delivery": "Delivery",
+        "saleType": "Sale Type",
+        "finishing": "Finishing",
+        "theArea": "The Area",
+        "showMore": "Show More",
+        "showLess": "Show Less",
+        "viewMap": "View On The Map",
+        "schemes": "Schemes",
+        "projectOutline": "Project Outline",
+        "floorPlan": "Floor Plan",
+        "facilities": "Facilities",
+        "plans": "Payment Plans",
+        "interview": "Request an Interview",
+        "interviewTime": "Schedule a call with a sales representative.",
+        "zoom": "Zoom",
+        "personal": "In-Person",
+        "name": "Name",
+        "phone": "Phone Number",
+        "email": "Email",
+        "msg": "Your Message",
+        "time": "Time",
+        "send": "Send",
+        "price": "Price",
+        "type": "Property Type"
+    },
+    "nav": {
+        "home": "Home",
+        "search": "Search",
+        "blog": "Blog",
+        "about": "About",
+        "contact": "Contact Us"
+    },
+    "home": {
+        "best": "The best place for",
+        "urHome": "Find Your Dream Home",
+        "large": "We have a large selection of real estate units that you can find out information about",
+        "advanced": "Advanced",
+        "placeholder": "Enter an address, neighborhood, or city for Search",
+        "topAreas": "Top Areas",
+        "topCompounds": "Top Compounds",
+        "recommended": "Recommended",
+        "compound": "Compounds",
+        "properties": "Properties",
+        "seeDetails": "See Details"
+    },
+    "contact": {
+        "title": "We'd love to hear from you.",
+        "text": "We are here to answer any question you may have.",
+        "help": "Need help? Talk to our expert.",
+        "talk": "Talk to our experts or Browse through more properties.."
+    },
+    "about": {
+        "mission": "We're on a Mission to Change the View of the Real Estate Field.",
+        "text": "Whether you're looking for your dream home or a sound investment, navigating the real estate market can be complex. We're here to simplify the process, guiding you every step of the way with expertise and integrity.",
+        "text2": "Our team is dedicated to finding the best properties that match your needs and aspirations. From luxurious homes to prime commercial spaces, we ensure every client finds the perfect place to thrive."
+    }
+}
