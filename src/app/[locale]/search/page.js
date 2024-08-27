@@ -6,9 +6,9 @@ export const metadata = {
 
 const Search = () => {
   return (
-    <section className="pt0-md pt120">
+    <section className="pt40-md pt180">
       {/* Breadcumb Sections */}
-      <ProperteyFiltering search title="اكتشف الكمبوندات (الشيخ زايد)" />
+      <ProperteyFiltering search title="اكتشف الكمبوندات (الشيخ زايد)" isCom />
     </section>
   );
 };

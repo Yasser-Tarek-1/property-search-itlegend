@@ -16,7 +16,7 @@ const ContactMeta = () => {
           <div className="contact-info">
             <p className="info-title">{contact.title}</p>
             {contact.phone && (
-              <h6 className="info-phone">
+              <h6 className="info-phone text-center" dir="ltr">
                 <a href={contact.phoneLink}>{contact.phone}</a>
               </h6>
             )}

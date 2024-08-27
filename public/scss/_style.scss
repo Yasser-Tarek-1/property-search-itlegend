@@ -70,7 +70,7 @@ Tag: advanced search, agency, agent, classified, directory, house, listing, prop
 // --main-color: #eb6753;
 // --main-color-hover:#ee4c34;
 :root {
-    --main-color: #112c4e;
+    --main-color: #0f2950;
     --main-color-hover: #183c68;
     --icon-font-family: "Font Awesome 6 Pro";
     --icon-font-family2: "Flaticon";
@@ -535,6 +535,9 @@ li {
 
 .breadcumb-style1 {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .breadcumb-style1 .title {
@@ -550,7 +553,7 @@ li {
     color: var(--headings-color);
     font-family: var(--title-font-family);
     font-weight: 400;
-    position: relative;
+    // position: relative;
 }
 
 /* Dashboard Style Code Here */
@@ -2885,8 +2888,10 @@ li {
 }
 
 .listing-style14 {
+    // this class i update it for compound page
     border-radius: 12px;
-    padding: 10px 80px 90px 0;
+    // padding: 10px 80px 90px 0;
+    padding: 0;
     position: relative;
 }
 
@@ -2951,6 +2956,29 @@ li {
     font-weight: 600;
 }
 
+.facilities .listing-style14 .list-meta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-right: 0 !important;
+}
+
+.facilities .listing-style14 .list-meta p {
+    font-size: 15px;
+    margin-right: 0 !important;
+    font-family: var(--title-font-family);
+    font-weight: 600;
+}
+
+
+
+.facilities .list-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
 .listing-style14 .list-meta a:last-child {
     margin-right: 0;
 }
@@ -2962,19 +2990,23 @@ li {
 }
 
 .listing-style14 .list-meta span {
-    background-color: #ffffff;
+    // background-color: #ffffff;
+    // color: var(--headings-color);
+    background-color: var(--main-color);
+    color: #fff;
     border-radius: 12px;
     -webkit-box-shadow: 0px 6px 15px rgba(64, 79, 104, 0.05);
     -o-box-shadow: 0px 6px 15px rgba(64, 79, 104, 0.05);
     box-shadow: 0px 6px 15px rgba(64, 79, 104, 0.05);
-    color: var(--headings-color);
-    display: block;
+    // display: block;
     font-size: 17px;
     height: 50px;
     line-height: 50px;
     margin-right: 10px;
     text-align: center;
-    width: 50px;
+    width: 50px;display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .listing-style14 .list-meta2 a {
@@ -3712,7 +3744,8 @@ li {
 
 /*Home 2 Banner Content*/
 .home2-hero-banner {
-    background-image: url(../images/home/home-2.jpg);
+    background-image: url(/home.jpg);
+    // background-image: url(../images/home/home-2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     height: 650px;
@@ -3748,7 +3781,8 @@ li {
 }
 
 .home-banner-style2 {
-    background-color: #181a20;
+    // background-color: #181a20;
+    background-color: var(--main-color);
     position: relative;
 }
 
@@ -3760,6 +3794,7 @@ li {
     display: -ms-flexbox;
     display: flex;
     height: 650px;
+    margin-bottom: 200px;
 }
 
 @media (max-width: 991.98px) {
@@ -4421,7 +4456,8 @@ li {
 
 /*Home 1 Banner Content*/
 .home-banner-style8 {
-    background-image: url(../images/home/home-8.jpg);
+    // background-image: url(../images/home/home-8.jpg);
+    background-image: url(/home.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -5230,10 +5266,10 @@ section {
 
 .scrollToHome {
     background-color: transparent;
-    border: 1px solid var(--main-color);
+    border: 1px solid #eb1b34;
     border-radius: 50%;
     bottom: 45px;
-    color: var(--main-color);
+    color: #eb1b34;
     display: block;
     height: 50px;
     line-height: 50px;
@@ -5256,7 +5292,7 @@ section {
 }
 
 .scrollToHome:hover {
-    background-color: var(--main-color);
+    background-color: #eb1b34;
     color: #ffffff;
 }
 
@@ -6317,7 +6353,7 @@ section {
 .form-style1 .form-control.active,
 .form-style1 .form-control:focus {
     border: 1px solid transparent;
-    outline: 2px solid var(--headings-color);
+    outline: 2px solid var(--main-color);
     color: var(--headings-color);
 }
 
@@ -6381,7 +6417,7 @@ section {
 .form-style2 .form-control.active,
 .form-style2 .form-control:focus {
     border: 1px solid transparent;
-    outline: 2px solid var(--headings-color);
+    outline: 2px solid var(--main-color);
 }
 
 .form-style2 .form-label {
@@ -6423,7 +6459,7 @@ textarea:focus {
 
 .form-control:focus {
     border: 1px solid transparent;
-    outline: 2px solid var(--headings-color);
+    outline: 2px solid var(--main-color);
     -webkit-box-shadow: none;
     box-shadow: none;
 }
@@ -6527,7 +6563,8 @@ textarea:focus {
 }
 
 .agent-single-form {
-    margin-top: -150px;
+    // margin-top: -150px;
+    margin-top: -230px;
 }
 
 @media (max-width: 991.98px) {
@@ -7548,8 +7585,8 @@ textarea:focus {
 }
 
 .btn-dark {
-    background-color: var(--headings-color);
-    border: 1px solid var(--headings-color);
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
     color: #ffffff;
 }
 
@@ -8842,6 +8879,11 @@ li.mm-listitem:focus {
     position: relative;
 }
 
+
+.home-style2 .advance-search-tab {
+    margin-top: 20px !important;
+}
+
 .advance-style2 {
     max-width: 970px;
     position: relative;
@@ -9667,7 +9709,7 @@ input:focus-visible {
 .home8-sidebar-wrapper .tel {
     margin-left: -12px;
     top: 18%;
-    width: 92px;
+    // width: 124px;
 }
 
 .home8-sidebar-wrapper .tel,
@@ -10653,7 +10695,7 @@ input:focus-visible {
     display: block;
     height: 40px;
     line-height: 40px;
-    position: absolute;
+    // position: absolute;
     right: 0;
     text-align: center;
     top: 0;
@@ -10959,8 +11001,14 @@ input:focus-visible {
     position: relative;
 }
 
+.dropdown-lists.at-home8>div.btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .dropdown-lists.at-home8 .open-btn i {
-    position: absolute;
+    // position: absolute;
     right: 15px;
 }
 
@@ -11641,6 +11689,7 @@ input:focus-visible {
 
 .bdr1 {
     border: 1px solid #dddddd;
+    // border: 2px solid var(--main-color);
 }
 
 .bdrb1 {

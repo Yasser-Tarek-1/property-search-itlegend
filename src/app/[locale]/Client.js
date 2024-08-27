@@ -16,7 +16,7 @@ if (typeof window !== "undefined") {
 export default function Client({ children }) {
   useEffect(() => {
     Aos.init({
-      duration: 1200,
+      duration: 900,
       once: true,
     });
   }, []);

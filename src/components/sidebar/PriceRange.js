@@ -28,6 +28,7 @@ const PriceRange = ({ filterFunctions }) => {
           ]}
           onChange={(value) => handleOnChange(value)}
           id="slider"
+          reverse
         />
         <div className="d-flex align-items-center">
           <span id="slider-range-value1">${price[0]}</span>

@@ -4,8 +4,11 @@ import MobileMenu from "@/components/common/mobile-menu";
 import ApartmentTypes from "@/components/home/ApartmentTypes";
 // import FeaturedListings from "@/components/home/FeatuerdListings";
 import Header from "@/components/home/Header";
+import Hero from "@/components/home/home-v8/hero";
 import PropertiesByCities from "@/components/home/PropertiesByCities";
-import Hero from "@/components/home/hero";
+import SidebarStickyBar from "@/components/home/SidebarStickyBar";
+import HomeHero from "@/components/homeHero/HomeHero";
+// import Hero from "@/components/home/hero";
 import { useLocale, useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -19,36 +22,13 @@ export const metadata = {
   title: "Property Search | Search Smarter, Find Faster",
 };
 
-const Home_V1 = () => {
+const Home = () => {
   const t = useTranslations("home");
   const local = useLocale();
 
   return (
     <>
-      {/* Home Banner Style V1 */}
-      <section className="home-banner-style1 p0">
-        <div className="home-style1">
-          <div className="container">
-            <div className="row">
-              <div className="col-xl-11 mx-auto">
-                <Hero />
-              </div>
-            </div>
-          </div>
-          {/* End .container */}
-
-          <a href="#explore-property">
-            <div className="mouse_scroll animate-up-4">
-              <Image
-                width={20}
-                height={105}
-                src="/images/about/home-scroll.png"
-                alt="scroll image"
-              />
-            </div>
-          </a>
-        </div>
-      </section>
+      <HomeHero />
       {/* End Home Banner Style V1 */}
       {/* Top Areas */}
       <section className="pb40-md pb90">
@@ -178,4 +158,4 @@ const Home_V1 = () => {
   );
 };
 
-export default Home_V1;
+export default Home;

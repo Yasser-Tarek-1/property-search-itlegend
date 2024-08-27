@@ -47,7 +47,7 @@ export default async function RootLayout({ children, params: { locale } }) {
               {children}
               {/* Start Our Footer */}
               <section
-                style={{ background: "#425d79" }}
+                style={{ background: "#0f2950" }}
                 className="footer-style1 pt60 pb-0"
               >
                 <Footer />

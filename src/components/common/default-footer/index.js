@@ -11,33 +11,32 @@ const Footer = () => {
     <>
       <div className="container">
         <div className="row">
-          <div className="col-lg-3">
+          <div className="col-lg-4">
             <div className="footer-widget mb-4 mb-lg-5">
               <Link className="footer-logo" href="/">
                 <Image
-                  width={155}
-                  height={60}
+                  width={186}
+                  height={72}
+                  // width={155}
+                  // height={60}
                   className="mb40"
                   src="/logo.png"
                   alt="Footer Logo"
                 />
               </Link>
-              <div className="cta-btns-style1 d-block d-sm-flex align-items-center justify-content-lg-end">
-                <a
-                  target="_blank"
-                  href="tel:+201151731010"
-                  className="ud-btn btn-dark"
-                >
-                  <span className="flaticon-call vam pe-2" />
-                  +20 11 51731010
-                </a>
+              <ContactMeta />
+              <div className="social-widget">
+                <h6 className="text-white mb10">
+                  تابعنا على وسائل التواصل الاجتماعي
+                </h6>
+                <Social />
               </div>
             </div>
           </div>
           {/* End .col-lg-5 */}
 
-          <div className="col-lg-9">
-            <div className="footer-widget mb-4 mb-lg-5">
+          <div className="col-lg-8">
+            <div className="footer-widget mb-4 mb-lg-">
               <div className="row justify-content-between w-100">
                 <MenuWidget />
               </div>

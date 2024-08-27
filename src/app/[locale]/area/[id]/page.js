@@ -6,6 +6,7 @@ import Link from "next/link";
 import ScheduleTour from "@/components/property/property-single-style/sidebar/ScheduleTour";
 import ProperteyFiltering from "@/components/property/ProperteyFiltering";
 import ContactUs from "@/components/ContactUs";
+import { useLocale } from "next-intl";
 
 export const metadata = {
   title: "Agency Single || Homez - Real Estate NextJS Template",
@@ -18,8 +19,10 @@ const Area = ({ params }) => {
     "العاصمة الإدارية الجديدة",
   ];
 
+  const local = useLocale();
+
   return (
-    <section className="agent-single pt60">
+    <section className="agent-single pt60 pb-0">
       <div className="cta-agent bgc-thm-light mx-auto maxw1600 pt60 pb60 bdrs12 position-relative mx20-lg">
         <div className="container">
           <div className="row align-items-center">
@@ -105,10 +108,24 @@ const Area = ({ params }) => {
                   </div>
                 </div>
               </div>
+            </div>{" "}
+            {/* areas */}
+            <div className="sidebar-widget mb30 mt30 pb20">
+              <h6 className="widget-title">مناطق مجاورة</h6>
+              <div className="tag-list mt20">
+                {tags.map((tag, index) => (
+                  <Link
+                    href={`/${local}/area/${tag}`}
+                    key={index}
+                    className="tags"
+                  >
+                    {tag}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
           {/* End .col-lg-8 */}
-
           <div className="col-lg-4">
             <div className="agent-single-form home8-contact-form default-box-shadow1 mb30-md position-relative">
               <ContactUs />
@@ -117,7 +134,7 @@ const Area = ({ params }) => {
           {/* End .col-lg-4 */}
         </div>
       </div>
-      <ProperteyFiltering title="كمبوندات في الشيخ زايد" />
+      <ProperteyFiltering title="كمبوندات في العالمين الجديدة" isCom />
     </section>
   );
 };

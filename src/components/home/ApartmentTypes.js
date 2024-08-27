@@ -43,7 +43,7 @@ const ApartmentTypes = () => {
         {apartmentTypes.map((apartment, index) => (
           <SwiperSlide key={index}>
             <div className="item">
-              <Link href={`${local}/compound/${apartment.title}`}>
+              <Link href={`/${local}/compound/${apartment.title}`}>
                 <div className="apartment-style1">
                   <div className="apartment-img">
                     <Image

@@ -4,7 +4,7 @@ import { useLocale } from "next-intl";
 import Card from "../Card";
 import Link from "next/link";
 
-const FeaturedListings = ({ data, colstyle }) => {
+const FeaturedListings = ({ data, colstyle, isCom = false }) => {
   const local = useLocale();
 
   return (
@@ -16,7 +16,11 @@ const FeaturedListings = ({ data, colstyle }) => {
           }  `}
           key={listing.id}
         >
-          <Link href={`/${local}/property/${listing.title}`}>
+          <Link
+            href={`/${local}/${isCom ? "compound" : "property"}/${
+              listing.title
+            }`}
+          >
             <Card colstyle={colstyle} data={listing} />
           </Link>
         </div>

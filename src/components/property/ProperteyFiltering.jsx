@@ -1,6 +1,7 @@
 "use client";
 
 import listings from "@/data/listings";
+import listingC from "@/data/listingC";
 import React, { useState, useEffect } from "react";
 import ListingSidebar from "../sidebar";
 import TopFilterBar from "./TopFilterBar";
@@ -13,6 +14,7 @@ const FeaturedListings = dynamic(() => import("./FeatuerdListings"), {
 export default function ProperteyFiltering({
   title = "اكتشف سيراك للتطوير العقاري",
   search,
+  isCom = false,
 }) {
   const [filteredData, setFilteredData] = useState([]);
 
@@ -132,15 +134,25 @@ export default function ProperteyFiltering({
   };
 
   useEffect(() => {
-    const refItems = listings.filter((elm) => {
-      if (listingStatus == "All") {
-        return true;
-      } else if (listingStatus == "Buy") {
-        return !elm.forRent;
-      } else if (listingStatus == "Rent") {
-        return elm.forRent;
-      }
-    });
+    const refItems = isCom
+      ? listingC.filter((elm) => {
+          if (listingStatus == "All") {
+            return true;
+          } else if (listingStatus == "Buy") {
+            return !elm.forRent;
+          } else if (listingStatus == "Rent") {
+            return elm.forRent;
+          }
+        })
+      : listings.filter((elm) => {
+          if (listingStatus == "All") {
+            return true;
+          } else if (listingStatus == "Buy") {
+            return !elm.forRent;
+          } else if (listingStatus == "Rent") {
+            return elm.forRent;
+          }
+        });
 
     let filteredArrays = [];
 
@@ -244,8 +256,9 @@ export default function ProperteyFiltering({
 
   return (
     // bgc-f7
+    // pt0 for developer and area
     <>
-      <section className="breadcumb-section pb5">
+      <section className="breadcumb-section pb5 pt0">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -258,7 +271,7 @@ export default function ProperteyFiltering({
                   role="button"
                   aria-controls="listingSidebarFilter"
                 >
-                  <span className="flaticon-settings" /> Filter
+                  <span className="flaticon-settings" /> <span>بحث</span>
                 </a>
               </div>
             </div>
@@ -316,7 +329,11 @@ export default function ProperteyFiltering({
 
           {/* End TopFilterBar */}
           <div className="row">
-            <FeaturedListings colstyle={colstyle} data={pageItems} />
+            <FeaturedListings
+              colstyle={colstyle}
+              data={pageItems}
+              isCom={isCom}
+            />
           </div>
           {/* End .row */}
           <div className="row">

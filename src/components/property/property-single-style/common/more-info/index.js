@@ -17,7 +17,7 @@ const InfoWithForm = () => {
       return {
         ...styles,
         backgroundColor: isSelected
-          ? "#112c4e"
+          ? "#0f2950"
           : isHovered
           ? "#eb675312"
           : isFocused

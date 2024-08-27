@@ -26,8 +26,8 @@ const SingleAgencyCta = ({ id, colorWhite = true, isArea }) => {
         </div>
         {/* End single image */}
         <div className="single-contant ml0-xs   ">
-          <div className="d-flex align-items-center gap-3">
-            <h2 className={`${colorWhite && "text-white"} title mb-3 `}>
+          <div className="d-flex align-items-center gap-3 mb-2">
+            <h2 className={`${colorWhite && "text-white"} title mb-0 `}>
               {isArea ? "العالمين الجديدة" : "سيراك للتطوير العقاري"}
             </h2>
             <span class="badge bg-secondary d-flex align-items-center">
