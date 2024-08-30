@@ -41,9 +41,17 @@ const FloorPlans = ({ isCompound = false }) => {
               aria-expanded={index === 1 ? "true" : "false"}
               aria-controls={`collapse${index}`}
             >
-              <span className="w-100 d-md-flex align-items-center">
+              <div className="w-100 d-flex align-items-center justify-content-between">
                 <span className="mr10-sm">{t(floorPlan.title)}</span>
-              </span>
+                <span>
+                  <Image
+                    src="/blueprint-scheme.png"
+                    alt="scheme"
+                    width={24}
+                    height={24}
+                  />
+                </span>
+              </div>
             </button>
           </h2>
           <div

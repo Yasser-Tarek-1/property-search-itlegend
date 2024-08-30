@@ -33,20 +33,14 @@ const PropertyGallery = ({ id }) => {
             {/* preview-img-1 */}
             <div className="popup-img sp-img w-100 h-100">
               <Item
-                original={
-                  "https://m.ahstatic.com/is/image/accorhotels/El_Gouna_xxxxxx_i103185:3by2?wid=555&hei=370&dpr=on,2&qlt=85&resMode=sharp2&op_usm=0.5,0.3,2,0&iccEmbed=true&icc=sRGB"
-                }
-                thumbnail={
-                  "https://m.ahstatic.com/is/image/accorhotels/El_Gouna_xxxxxx_i103185:3by2?wid=555&hei=370&dpr=on,2&qlt=85&resMode=sharp2&op_usm=0.5,0.3,2,0&iccEmbed=true&icc=sRGB"
-                }
+                original={"/home.jpg"}
+                thumbnail={"/home.jpg"}
                 width={1024}
                 height={768}
               >
                 {({ ref, open }) => (
                   <Image
-                    src={
-                      "https://m.ahstatic.com/is/image/accorhotels/El_Gouna_xxxxxx_i103185:3by2?wid=555&hei=370&dpr=on,2&qlt=85&resMode=sharp2&op_usm=0.5,0.3,2,0&iccEmbed=true&icc=sRGB"
-                    }
+                    src={"/home.jpg"}
                     width={590}
                     height={510}
                     ref={ref}

@@ -1,8 +1,10 @@
+import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
-
+  const params = useSearchParams();
+  const v = params.get("v");
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -26,7 +28,7 @@ export default function ScrollToTop() {
 
   return (
     <>
-      {isVisible && (
+      {isVisible && v != 2 && (
         <div
           className="scrollToHome"
           style={{ cursor: "pointer" }}

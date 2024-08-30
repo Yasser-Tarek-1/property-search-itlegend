@@ -13,14 +13,14 @@ const Footer = () => {
         <div className="row">
           <div className="col-lg-4">
             <div className="footer-widget mb-4 mb-lg-5">
-              <Link className="footer-logo" href="/">
+              <Link className="footer-logo mr20" href="/">
                 <Image
-                  width={186}
-                  height={72}
+                  width={190}
+                  height={85}
                   // width={155}
                   // height={60}
                   className="mb40"
-                  src="/logo.png"
+                  src="/white-logo.png"
                   alt="Footer Logo"
                 />
               </Link>

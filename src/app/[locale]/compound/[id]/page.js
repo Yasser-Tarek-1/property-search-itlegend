@@ -8,7 +8,8 @@ import PropertyDetails from "@/components/property/property-single-style/common/
 import PropertyHeader from "@/components/property/property-single-style/common/PropertyHeader";
 import ProperytyDescriptions from "@/components/property/property-single-style/common/ProperytyDescriptions";
 import ScheduleTour from "@/components/property/property-single-style/sidebar/ScheduleTour";
-import PropertyGallery from "@/components/property/single-v4/property-gallery";
+// import PropertyGallery from "@/components/property/single-v4/property-gallery";
+import PropertyGallery from "@/components/property/property-single-style/single-v1/PropertyGallery";
 import { useLocale, useTranslations } from "next-intl";
 import FeaturedListings from "@/components/home/FeatuerdListings";
 import ProperteyFiltering from "@/components/property/ProperteyFiltering";
@@ -27,20 +28,18 @@ const Compound = ({ params }) => {
   return (
     <>
       {/* Property All Single V1 */}
-      <section className="pt40-md pb90 pb60-md">
+      <section className="pt140 pt60-md pb90 bgc-f7">
         <div className="container">
           {/* End .row */}
 
           {/* End .row */}
-          <section className="pt50 pb30">
-            <div className="row">
-              <PropertyHeader id={params.id} isCompound />
-            </div>
-          </section>
+          <div className="row">
+            <PropertyHeader id={params.id} isCompound />
+          </div>
 
-          <section className="pt20 pb60 pb30-md bgc-white">
+          <div className="row mb30 mt30">
             <PropertyGallery id={params.id} />
-          </section>
+          </div>
 
           <div className="row wrap">
             <div className="col-lg-8">

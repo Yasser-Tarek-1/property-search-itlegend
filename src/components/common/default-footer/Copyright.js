@@ -25,7 +25,7 @@ const Footer = () => {
       <div className="row">
         <div className="text-center text-lg-start">
           <p className="copyright-text text-gray ff-heading mb-0">
-            © Property Search {getCurrentYear()} - All rights reserved
+            © It Legend {getCurrentYear()} - All rights reserved
           </p>
         </div>
       </div>

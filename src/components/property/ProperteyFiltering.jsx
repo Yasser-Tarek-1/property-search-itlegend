@@ -258,12 +258,12 @@ export default function ProperteyFiltering({
     // bgc-f7
     // pt0 for developer and area
     <>
-      <section className="breadcumb-section pb5 pt0">
+      <section className="breadcumb-section pb5 pt5">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="breadcumb-style1">
-                <h2 className="title">{title}</h2>
+                <h2 className="title mb-0">{title}</h2>
                 <a
                   className="filter-btn-left mobile-filter-btn d-block d-lg-none"
                   data-bs-toggle="offcanvas"

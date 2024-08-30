@@ -29,9 +29,13 @@ const Home = () => {
   return (
     <>
       <HomeHero />
-      {/* End Home Banner Style V1 */}
+
+      {/* Banner */}
+      <Banner notAos className="banner-1" />
+      {/* Banner */}
+
       {/* Top Areas */}
-      <section className="pb40-md pb90">
+      <section id="top-area" className="pb40 pt70">
         <div className="container">
           <div
             className="row align-items-center"
@@ -62,11 +66,11 @@ const Home = () => {
       {/* End Top Areas */}
 
       {/* Banner */}
-      <Banner />
+      <Banner className="banner-2" />
       {/* Banner */}
 
       {/* Top Compounds */}
-      <section className="pb40-md pb40">
+      <section className="pb40 pt70">
         <div className="container">
           <div className="row  justify-content-between align-items-center">
             <div className="col-auto">
@@ -88,29 +92,27 @@ const Home = () => {
                 <div className="col-auto">
                   <button
                     className={`${
-                      local == "ar" ? "rotate180" : ""
-                    } apartment-type2-prev__active swiper_button `}
-                  >
-                    <i className="far fa-arrow-left-long" />
-                  </button>
-                </div>
-                {/* End prev */}
-
-                <div className="col-auto">
-                  <div className="pagination swiper--pagination apartment-type2_pagination__active" />
-                </div>
-                {/* End pagination */}
-
-                <div className="col-auto">
-                  <button
-                    className={`${
-                      local == "ar" ? "rotate180" : ""
+                      local == "en" ? "rotate180" : ""
                     } apartment-type2-next__active swiper_button `}
                   >
                     <i className="far fa-arrow-right-long" />
                   </button>
                 </div>
                 {/* End Next */}
+                <div className="col-auto">
+                  <div className="pagination swiper--pagination apartment-type2_pagination__active" />
+                </div>
+                {/* End pagination */}
+                <div className="col-auto">
+                  <button
+                    className={`${
+                      local == "en" ? "rotate180" : ""
+                    } apartment-type2-prev__active swiper_button`}
+                  >
+                    <i className="far fa-arrow-left-long" />
+                  </button>
+                </div>
+                {/* End prev */}
               </div>
             </div>
             {/* End .col for navigation and pagination */}
@@ -130,11 +132,11 @@ const Home = () => {
       {/* End Top Compounds */}
 
       {/* Banner */}
-      <Banner />
+      <Banner className="banner-3" />
       {/* Banner */}
 
       {/* Recommended  */}
-      <section className="pb40-md pb90 bgc-white">
+      <section className="pb40 pt70 bgc-white">
         <div className="container">
           <div className="row align-items-center" data-aos="fade-up">
             <div className="col-lg-9">

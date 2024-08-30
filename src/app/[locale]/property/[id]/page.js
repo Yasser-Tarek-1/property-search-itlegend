@@ -29,7 +29,7 @@ const Property = ({ params }) => {
   return (
     <>
       {/* Property All Single V1 */}
-      <section className="pt180 pt60-md pb90 bgc-f7">
+      <section className="pt140 pt60-md pb90 bgc-f7">
         <div className="container">
           <div className="row">
             <PropertyHeader id={params.id} />
@@ -68,18 +68,19 @@ const Property = ({ params }) => {
                   </div>
                   <div style={{ flex: 1 }}>
                     <h4 className="title fz17 mb10 mt40">{t("plans")}</h4>
-                    <div>
-                      <span>
-                        <span className="fw600 fz20">351,500</span> / شهر
-                      </span>{" "}
-                      |{" "}
-                      <span>
-                        <span className="fw600 fz20">1,554,000</span> - مقدم
-                      </span>{" "}
-                      |{" "}
-                      <span>
-                        <span className="fw600 fz20">7</span> سنوات
-                      </span>
+                    <div className="plans">
+                      <p className="mb5">
+                        <span className="fw600 fz20">1,554,000</span> -{" "}
+                        <span>مقدم</span>
+                      </p>
+                      <p className="mb5">
+                        <span className="fw600 fz20">351,500</span> /{" "}
+                        <span>شهر</span>
+                      </p>
+
+                      <p className="mb5">
+                        <span className="fw600 fz20">7</span> <span>سنوات</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -149,7 +150,6 @@ const Property = ({ params }) => {
           </section>
           {/* Recommended */}
         </div>
-        {/* End .container */}
       </section>
       {/* End Property All Single V1  */}
     </>

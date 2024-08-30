@@ -497,7 +497,7 @@ li {
 
 /* All styles about breadcumb */
 .breadcumb-section {
-    padding: 70px 0;
+    padding: 50px 0;
 }
 
 .breadcumb-section2 {
@@ -3004,7 +3004,8 @@ li {
     line-height: 50px;
     margin-right: 10px;
     text-align: center;
-    width: 50px;display: flex;
+    width: 50px;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -3187,7 +3188,7 @@ li {
 }
 
 .property-action .price {
-    font-size: 26px;
+    font-size: 30px;
     letter-spacing: 0.02em;
 }
 
@@ -3640,11 +3641,23 @@ li {
 
 /* Hero Styles All Type Of */
 .home-banner-style1 {
-    background-image: url(/home.jpg);
+    // background-image: url(/home.jpg);
+    background-image: url(/home-3.webp);
     // background-image: url("https://media.istockphoto.com/id/1540164261/photo/luxury-house-with-swimming-pool-at-night.webp?s=2048x2048&w=is&k=20&c=4CuLrqrKDX8I5JE6CzvqIBGnKUybtx3BNQQoEK_iMIY=");
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
+
+}
+
+.home-banner-style1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 40%);
+    left: 0;
+    top: 0;
 }
 
 .home-banner-style1 .home-style1 {
@@ -3654,7 +3667,8 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 860px;
+    // height: 860px;
+    height: 680px;
 }
 
 @media (max-width: 767px) {
@@ -3744,11 +3758,11 @@ li {
 
 /*Home 2 Banner Content*/
 .home2-hero-banner {
-    background-image: url(/home.jpg);
+    background-image: url(/home-3.webp);
     // background-image: url(../images/home/home-2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
-    height: 650px;
+    height: 540px;
     max-width: 1600px;
     position: absolute;
     top: 200px;
@@ -4457,12 +4471,23 @@ li {
 /*Home 1 Banner Content*/
 .home-banner-style8 {
     // background-image: url(../images/home/home-8.jpg);
-    background-image: url(/home.jpg);
+    background-image: url(/home-3.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
+
+.home-banner-style8::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 40%);
+    left: 0;
+    top: 0;
+}
+
 
 .home-banner-style8 .home-style8 {
     -webkit-box-align: center;
@@ -4471,8 +4496,10 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 860px;
+    // height: 860px;
+    height: 680px;
 }
+
 
 @media (max-width: 1199.98px) {
     .home-banner-style8 .home-style8 {
@@ -8304,7 +8331,7 @@ header.nav-homepage-style .sidemenu-btn .img-2 {
 }
 
 header.sticky {
-    padding: 20px 0;
+    padding: 16px 0;
     position: fixed;
     width: 100%;
 }
@@ -9663,6 +9690,11 @@ input:focus-visible {
     -webkit-background-clip: padding-box;
 }
 
+
+.social-style1 {
+    text-align: center;
+}
+
 /* Social Styles */
 .social-style1 i {
     color: #bebdbd;
@@ -10943,6 +10975,10 @@ input:focus-visible {
     font-weight: 500;
     letter-spacing: 0em;
     padding: 7px 20px;
+    margin: 0 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .dropdown-lists .dropdown-menu,
@@ -11334,6 +11370,10 @@ input:focus-visible {
 /* Essential utility classes */
 .ff-heading {
     font-family: var(--title-font-family);
+}
+
+.ff-heading a {
+    color: #Fff;
 }
 
 .text-white {

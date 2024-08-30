@@ -11,7 +11,7 @@ export const metadata = {
 const BlogV1 = () => {
   const nav = useTranslations("nav");
   return (
-    <div className="bgc-f7 pt70 pb-0">
+    <div className="bgc-f7 pt0-md pt70 pb-0">
       {/* Breadcrumb Start */}
       <section className="breadcumb-section">
         <div className="container">

@@ -1,10 +1,11 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
 const Card = ({ colstyle = false, data }) => {
   const g = useTranslations("global");
   const card = data; // `data` is now a single listing object
+  const local = useLocale();
   return (
     <div className="item">
       <div
@@ -38,9 +39,9 @@ const Card = ({ colstyle = false, data }) => {
           <div className="list-meta2 d-flex justify-content-between align-items-center">
             <span className="for-what">المطور العقاري</span>
             <div className="icons d-flex align-items-center">
-              <a href="#">
+              <Link href={`/${local}/developer/1`}>
                 <span className="flaticon-fullscreen" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

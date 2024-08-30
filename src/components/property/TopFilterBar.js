@@ -58,10 +58,10 @@ const TopFilterBar = ({
                 data-bs-toggle="dropdown"
                 data-bs-auto-close="outside"
               >
-                {t("type")} <i className="fa fa-angle-down ms-2" />
+                {t("type")} <i className="fa fa-angle-down" />
               </button>
               <div className="dropdown-menu">
-                <div className="widget-wrapper bdrb1 pb25 mb-0 pl20">
+                <div className="widget-wrapper bdrb1 pb25 mb-0 pl20 pr20">
                   <h6 className="list-title"> {t("type")}</h6>
                   <div className="checkbox-style1">
                     <PropertyType filterFunctions={filterFunctions} />
@@ -86,7 +86,7 @@ const TopFilterBar = ({
                 data-bs-toggle="dropdown"
                 data-bs-auto-close="outside"
               >
-                {t("price")} <i className="fa fa-angle-down ms-2" />
+                {t("price")} <i className="fa fa-angle-down " />
               </button>
 
               <div className="dropdown-menu dd3">
@@ -124,10 +124,9 @@ const TopFilterBar = ({
               }
             >
               <option>الاحدث</option>
-              <option>Best Seller</option>
-              <option>Best Match</option>
-              <option>Price Low</option>
-              <option>Price High</option>
+              <option>افضل سعر</option>
+              <option>اقل سعر</option>
+              <option>اعلي سعر</option>
             </select>
           </div>
           <div

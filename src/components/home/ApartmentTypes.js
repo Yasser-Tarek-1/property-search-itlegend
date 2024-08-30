@@ -14,6 +14,7 @@ const ApartmentTypes = () => {
   return (
     <>
       <Swiper
+        dir="rtl"
         spaceBetween={30}
         modules={[Navigation, Pagination]}
         navigation={{

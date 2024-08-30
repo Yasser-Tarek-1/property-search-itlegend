@@ -14,6 +14,7 @@ const PropertiesByCities = () => {
   return (
     <>
       <Swiper
+        dir="rtl"
         spaceBetween={30}
         modules={[Navigation]}
         navigation={{
@@ -75,17 +76,24 @@ const PropertiesByCities = () => {
         ))}
       </Swiper>
 
-      <div className="rounded-arrow arrowY-center-position">
-        <button className="property-by-city-prev__active swiper_button _prev">
-          <i className="far fa-chevron-left" />
-        </button>
-        {/* End prev */}
-
-        <button className="property-by-city-next__active swiper_button _next">
-          <i className="far fa-chevron-right" />
-        </button>
-        {/* End Next */}
-      </div>
+      {/* <div className="rounded-arrow arrowY-center-position"> */}
+      <button
+        className={`${
+          local == "ar" ? "right-0" : "left-0"
+        } property-by-city-next__active swiper_button _next areas`}
+      >
+        <i className="far fa-chevron-left" />
+      </button>
+      {/* End Next */}
+      <button
+        className={`${
+          local == "ar" ? "left-0" : "right-0"
+        } property-by-city-prev__active swiper_button _prev areas`}
+      >
+        <i className="far fa-chevron-right" />
+      </button>
+      {/* End prev */}
+      {/* </div> */}
       {/* End .col for navigation  */}
     </>
   );

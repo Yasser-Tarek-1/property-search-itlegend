@@ -36,7 +36,7 @@ const SidebarStickyBar = () => {
             </a>
           ))}
         </div>
-        <a href="#explore-property">
+        <a href="#top-area">
           <div className="mouse_scroll at-home8 text-center d-block">
             <Image
               width={20}

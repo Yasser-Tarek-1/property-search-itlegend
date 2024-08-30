@@ -12,7 +12,7 @@ const HomeHero = () => {
 
   return (
     <>
-      {v == 1 || (v != 2 && v != 3) ? (
+      {v == 1 || v != 2 ? (
         <section className="home-banner-style1 p0">
           <div className="home-style1">
             <div className="container">
@@ -22,7 +22,7 @@ const HomeHero = () => {
                 </div>
               </div>
             </div>
-            <a href="#explore-property">
+            <a href="#top-area">
               <div className="mouse_scroll animate-up-4">
                 <Image
                   width={20}
@@ -32,19 +32,6 @@ const HomeHero = () => {
                 />
               </div>
             </a>
-          </div>
-        </section>
-      ) : v == 2 ? (
-        <section className="home-banner-style2 p0">
-          <div className="home-style2">
-            <div className="container maxw1600">
-              <div className="home2-hero-banner bdrs12"></div>
-              <div className="row">
-                <div className="col-xl-10 mx-auto">
-                  <Hero />
-                </div>
-              </div>
-            </div>
           </div>
         </section>
       ) : (

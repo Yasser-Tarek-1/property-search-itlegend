@@ -16,6 +16,7 @@ const FeaturedListings = () => {
       {isClient && (
         <>
           <Swiper
+            dir="rtl"
             spaceBetween={30}
             modules={[Navigation, Pagination]}
             navigation={{
@@ -51,17 +52,32 @@ const FeaturedListings = () => {
             ))}
           </Swiper>
 
-          <div className="rounded-arrow arrowY-center-position">
-            <button className="featured-prev__active swiper_button _prev">
+          {/* <div className="rounded-arrow arrowY-center-position"> */}
+          {/* <button className="featured-prev__active swiper_button _prev">
               <i className="far fa-chevron-left" />
-            </button>
-            {/* End prev */}
+            </button> */}
 
-            <button className="featured-next__active swiper_button _next">
+          <button
+            className={`${
+              local == "ar" ? "right-0" : "left-0"
+            } featured-next__active swiper_button _next areas`}
+          >
+            <i className="far fa-chevron-left" />
+          </button>
+          <button
+            className={`${
+              local == "ar" ? "left-0" : "right-0"
+            } featured-prev__active swiper_button _prev areas`}
+          >
+            <i className="far fa-chevron-right" />
+          </button>
+          {/* End prev */}
+
+          {/* <button className="featured-next__active swiper_button _next">
               <i className="far fa-chevron-right" />
-            </button>
-            {/* End Next */}
-          </div>
+            </button> */}
+          {/* End Next */}
+          {/* </div> */}
         </>
       )}
     </>

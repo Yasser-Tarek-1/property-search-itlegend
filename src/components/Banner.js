@@ -1,19 +1,15 @@
 import Image from "next/image";
 import React from "react";
 
-const Banner = () => {
+const Banner = ({ image, notAos = false, className }) => {
   return (
     <section className="pt40 pb40">
       <div className="container">
-        <div className="home-banner" data-aos="fade-up" data-aos-delay="100">
-          <Image
-            src="/banner.webp"
-            alt="banner"
-            layout="responsive"
-            width={1000}
-            height={230}
-            className="object-cover"
-          />
+        <div
+          className={`${className} home-banner`}
+          data-aos={!notAos && "fade-up"}
+          data-aos-delay="100"
+        >
           <div className="overlay">
             <h5>SEARCH SMARTER, FIND FASTER</h5>
           </div>

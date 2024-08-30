@@ -52,7 +52,7 @@ const AdvanceFilterModal = () => {
       <div className="modal-content">
         <div className="modal-header pl30 pr30">
           <h5 className="modal-title" id="exampleModalLabel">
-            More Filter
+          المزيد من الخيارات
           </h5>
           <button
             type="button"
@@ -67,7 +67,7 @@ const AdvanceFilterModal = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="widget-wrapper">
-                <h6 className="list-title mb20">Price Range</h6>
+                <h6 className="list-title mb20">السعر</h6>
                 <div className="range-slider-style modal-version">
                   <PriceRange />
                 </div>
@@ -79,7 +79,7 @@ const AdvanceFilterModal = () => {
           <div className="row">
             <div className="col-sm-6">
               <div className="widget-wrapper">
-                <h6 className="list-title">Type</h6>
+                <h6 className="list-title">النوع</h6>
                 <div className="form-style2 input-group">
                   <Select
                     defaultValue={[catOptions[1]]}
@@ -97,7 +97,7 @@ const AdvanceFilterModal = () => {
 
             <div className="col-sm-6">
               <div className="widget-wrapper">
-                <h6 className="list-title">Bedrooms</h6>
+                <h6 className="list-title">الغرف</h6>
                 <div className="form-style2">
                   <input
                     type="text"
@@ -114,7 +114,7 @@ const AdvanceFilterModal = () => {
           <div className="row">
             <div className="col-sm-6">
               <div className="widget-wrapper">
-                <h6 className="list-title">Location</h6>
+                <h6 className="list-title">الموقع</h6>
                 <div className="form-style2 input-group">
                   <Select
                     instanceId={id}
@@ -133,7 +133,7 @@ const AdvanceFilterModal = () => {
 
             <div className="col-sm-6">
               <div className="widget-wrapper">
-                <h6 className="list-title">Square Feet</h6>
+                <h6 className="list-title">المساحة</h6>
                 <div className="space-area">
                   <div className="d-flex align-items-center justify-content-between">
                     <div className="form-style1">
@@ -163,7 +163,7 @@ const AdvanceFilterModal = () => {
         <div className="modal-footer justify-content-between">
           <button className="reset-button">
             <span className="flaticon-turn-back px-1" />
-            <u>Reset all filters</u>
+            <u>إعادة ادخال</u>
           </button>
           <div className="btn-area">
             <button
@@ -172,7 +172,7 @@ const AdvanceFilterModal = () => {
               className="ud-btn btn-thm d-flex align-items-center gap-2"
               onClick={() => router.push(`/${local}/search`)}
             >
-              <span>Search</span>{" "}
+              <span>بحث</span>{" "}
               <span className="flaticon-search d-flex items-center justify-content-center align-text-top" />
             </button>
           </div>
