@@ -24,9 +24,9 @@ const PropertyHeader = ({ id, isCompound = false }) => {
 
           <Link
             href={`/${local}/area/${data.location}`}
-            className="pd-meta d-md-flex align-items-center"
+            className="pd-meta d-md-flex align-items-center w-fit"
           >
-            <p className="text fz15 mb-0 bdrr1 pr10 bdrrn-sm">
+            <p className="text fz15 mb-0 bdrr1 pr10 bdrrn-sm w-fit">
               {data.location}
             </p>
           </Link>
@@ -42,7 +42,7 @@ const PropertyHeader = ({ id, isCompound = false }) => {
               {data.price} {t("egp")}
             </h3>
             <Link href={`/${local}/developer/سيراك للتطوير العقاري`}>
-              <p className="text fz15 mb-0 bdrr1 pr10 bdrrn-sm">
+              <p className="text fz15 mb-0 bdrr1 pr10 bdrrn-sm w-fit">
                 سيراك للتطوير العقاري
               </p>
             </Link>

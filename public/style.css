@@ -2,6 +2,10 @@
   margin: 0;
 }
 
+.w-fit {
+  width: fit-content;
+}
+
 /* For WebKit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
   width: 12px; /* Width of the scrollbar */
