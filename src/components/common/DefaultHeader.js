@@ -1,12 +1,13 @@
 "use client";
-import MainMenu from "@/components/common/MainMenu";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import MainMenu from "./MainMenu";
+import { useLocale } from "next-intl";
 
 const DefaultHeader = () => {
   const [navbar, setNavbar] = useState(false);
-
+  const locale = useLocale();
   const changeBackground = () => {
     if (window.scrollY >= 10) {
       setNavbar(true);
@@ -34,8 +35,8 @@ const DefaultHeader = () => {
             <div className="row align-items-center justify-content-between">
               <div className="col-auto">
                 <div className="d-flex align-items-center justify-content-between">
-                  <div className="logos mr40">
-                    <Link className="header-logo logo1" href="/">
+                  <div className="logos">
+                    <Link className="header-logo logo1" href={`/${locale}`}>
                       <Image
                         width={138}
                         height={44}
@@ -43,7 +44,7 @@ const DefaultHeader = () => {
                         alt="Header Logo"
                       />
                     </Link>
-                    <Link className="header-logo logo2" href="/">
+                    <Link className="header-logo logo2" href={`/${locale}`}>
                       <Image
                         width={138}
                         height={44}
@@ -52,21 +53,13 @@ const DefaultHeader = () => {
                       />
                     </Link>
                   </div>
-                  {/* End Logo */}
-
                   <MainMenu />
-                  {/* End Main Menu */}
                 </div>
               </div>
-              {/* End .col-auto */}
-
-              {/* End .col-auto */}
             </div>
-            {/* End .row */}
           </div>
         </nav>
       </header>
-      {/* End Header */}
     </>
   );
 };

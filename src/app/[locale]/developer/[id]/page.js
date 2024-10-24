@@ -1,24 +1,26 @@
+"use server";
 import React from "react";
-import FormContact from "@/components/property/FormContact";
-import SingleAgencyCta from "@/components/property/SingleAgencyCta";
 import Image from "next/image";
-import Link from "next/link";
-import ScheduleTour from "@/components/property/property-single-style/sidebar/ScheduleTour";
-import ProperteyFiltering from "@/components/property/ProperteyFiltering";
-import ContactUs from "@/components/ContactUs";
-import { useLocale } from "next-intl";
+import Breadcrumb from "../components/Breadcrumb";
+import About from "../components/About";
+import DeveloperCompounds from "./@Compounds/page";
+import { getData } from "@/services/fetchData";
 
-export const metadata = {
-  title: "Agency Single || Homez - Real Estate NextJS Template",
-};
+async function getDeveloperDetails(id) {
+  return await getData(`/api/DeveloperDetails/${id}`);
+}
 
-const Developer = ({ params }) => {
-  const local = useLocale();
-  const tags = [
-    "القاهرة الجديدة",
-    "سيدي عبد الرحمن",
-    "العاصمة الإدارية الجديدة",
-  ];
+export async function generateMetadata({ params }) {
+  const developerDetails = await getDeveloperDetails(params.id);
+
+  return {
+    title: developerDetails?.data?.seoTitle,
+    description: developerDetails?.data?.seoDescription,
+  };
+}
+
+const Developer = async ({ params }) => {
+  const developerDetails = await getDeveloperDetails(params?.id);
 
   return (
     <section className="agent-single pt60 pb-0">
@@ -26,7 +28,7 @@ const Developer = ({ params }) => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-xl-7">
-              <SingleAgencyCta id={params.id} />
+              <Breadcrumb data={developerDetails?.data} />
               <div className="img-box-12 position-relative d-none d-xl-block">
                 <Image
                   width={120}
@@ -54,87 +56,15 @@ const Developer = ({ params }) => {
           </div>
         </div>
       </div>
-      {/* End cta-agent */}
-      <div className="container">
-        <div className="row wow fadeInUp" data-aos-delay="300">
-          <div className="col-lg-8 pr40 pr20-lg">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="agent-single-details mt30 pb30 bdrb1">
-                  <h6 className="fz17 mb30">عن سيراك للتطوير العقاري</h6>
-                  <p className="text">
-                    شركة سيراك للتطوير العقاري SERAC Developments هي شراكة
-                    إماراتية مصرية يمتلكها رجل الأعمال طارق سليمان والشيخ توحيد
-                    عبد الله ويمتلك كلا منهما خبرة واسعة في مجالات مختلفة،
-                    وتمكنت الشركة من تدشين العديد من المشروعات الناجحة التي حرصت
-                    الشركة على تصميمها بأحدث التقنيات الحديثة.
-                  </p>
-                  <div className="agent-single-accordion">
-                    <div
-                      className="accordion accordion-flush"
-                      id="accordionFlushExample"
-                    >
-                      <div className="accordion-item">
-                        <div
-                          id="flush-collapseOne"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="flush-headingOne"
-                          data-bs-parent="#accordionFlushExample"
-                          style={{}}
-                        >
-                          <div className="accordion-body p-0">
-                            <p className="text">
-                              أبرز مشروعات شركة سيراك للتطوير العقاري طرحت شركة
-                              SERAC Developments العديد من المشروعات التي لاقت
-                              اقبالًا كبيرًا من قبل المستثمرين ومن بينها
-                            </p>
-                          </div>
-                        </div>
-                        <h2 className="accordion-header" id="flush-headingOne">
-                          <button
-                            className="accordion-button p-0 collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseOne"
-                          >
-                            Show more
-                          </button>
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* areas */}
-            <div className="sidebar-widget mb30 mt30 pb20">
-              <h6 className="widget-title">مناطق المطور</h6>
-              <div className="tag-list mt20">
-                {tags.map((tag, index) => (
-                  <Link
-                    href={`/${local}/area/${tag}`}
-                    key={index}
-                    className="tags"
-                  >
-                    {tag}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-          {/* End .col-lg-8 */}
-
-          <div className="col-lg-4">
-            <div className="agent-single-form home8-contact-form default-box-shadow1 mb30-md position-relative">
-              <ContactUs />
-            </div>
-          </div>
-          {/* End .col-lg-4 */}
-        </div>
-      </div>
-      <ProperteyFiltering title="كمبوندات في سيراك للتطوير العقاري" isCom />
+      <About id={params?.id} developer={developerDetails?.data || []} />
+      <DeveloperCompounds
+        title={
+          params.locale == "ar"
+            ? developerDetails?.data?.developerNameAR
+            : developerDetails?.data?.developerNameEN
+        }
+        id={params?.id}
+      />
     </section>
   );
 };

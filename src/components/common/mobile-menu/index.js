@@ -1,9 +1,6 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import ContactInfo from "./ContactInfo";
-import Social from "./Social";
-import ProSidebarContent from "./ProSidebarContent";
 import SwitchLang from "../SwitchLang";
 import { useLocale, useTranslations } from "next-intl";
 
@@ -39,8 +36,6 @@ const MobileMenu = () => {
           </div>
         </div>
       </div>
-      {/* /.mobile-menu meta */}
-
       <div
         className="offcanvas offcanvas-start mobile_menu-canvas"
         tabIndex="-1"
@@ -64,10 +59,9 @@ const MobileMenu = () => {
           {/* End header */}
           <div className="hsidebar-content ">
             <div className="hiddenbar_navbar_content">
-              {/* <ProSidebarContent /> */}
               <ul className="sidebar-links">
                 <li data-bs-dismiss="offcanvas" aria-label="Close">
-                  <Link href="/">{t("home")}</Link>
+                  <Link href={`/${local}`}>{t("home")}</Link>
                 </li>
                 <li data-bs-dismiss="offcanvas" aria-label="Close">
                   <Link href={`/${local}/search`}>{t("search")}</Link>
@@ -84,7 +78,6 @@ const MobileMenu = () => {
               </ul>
             </div>
           </div>
-          {/* End hsidebar-content */}
         </div>
       </div>
     </div>

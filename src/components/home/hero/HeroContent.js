@@ -1,12 +1,13 @@
 "use client";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 
 const HeroContent = () => {
   const local = useLocale();
   const router = useRouter();
   const t = useTranslations("home");
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <div className="advance-search-tab mt50 mt30-md mx-auto animate-up-3">
@@ -24,13 +25,12 @@ const HeroContent = () => {
                         type="text"
                         name="search"
                         placeholder={t("placeholder")}
+                        onChange={(e) => setSearchTerm(e.target.value)}
                       />
                     </div>
                   </form>
                 </div>
               </div>
-              {/* End .col-md-8 */}
-
               <div className="col-md-4 col-lg-3">
                 <div className="d-flex align-items-center justify-content-start justify-content-md-center mt-3 mt-md-0 gap-3">
                   <button
@@ -44,7 +44,9 @@ const HeroContent = () => {
                   </button>
                   <button
                     className="advance-search-icon ud-btn btn-thm"
-                    onClick={() => router.push(`/${local}/search`)}
+                    onClick={() =>
+                      router.push(`/${local}/search?SearchTerm=${searchTerm}`)
+                    }
                     type="button"
                   >
                     <span className="flaticon-search d-flex items-center justify-content-center" />

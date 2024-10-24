@@ -1,5 +1,5 @@
 "use clint";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useTransition } from "react";
@@ -25,7 +25,7 @@ const SwitchLang = () => {
         className="d-flex align-items-center gap-1 lang-btn"
       >
         <div className="lang-global">
-          <Image src="/lang.png" width={19} height={19}  alt="lang"/>
+          <Image src="/lang.png" width={19} height={19} alt="lang" />
         </div>
         <span className="text-uppercase">{local == "ar" ? "EN" : "AR"}</span>
       </button>

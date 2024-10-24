@@ -1,4 +1,4 @@
-import AdvanceFilterModal from "@/components/common/advance-filter";
+import AdvanceFilterModal from "@/layout/advance-search";
 import HeroContent from "./HeroContent";
 import { useTranslations } from "next-intl";
 
@@ -15,9 +15,6 @@ const Hero = () => {
         <p className="hero-text fz15 animate-up-3">{t("large")}</p>
         <HeroContent />
       </div>
-      {/* End Hero content */}
-
-      {/* <!-- Advance Feature Modal Start --> */}
       <div className="advance-feature-modal">
         <div
           className="modal fade"
@@ -29,7 +26,6 @@ const Hero = () => {
           <AdvanceFilterModal />
         </div>
       </div>
-      {/* <!-- Advance Feature Modal End --> */}
     </>
   );
 };

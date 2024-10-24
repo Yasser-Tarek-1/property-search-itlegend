@@ -1,62 +1,37 @@
-import Pagination from "@/components/blog/Pagination";
-import Blog from "@/components/blog/blog-list-v1/Blog";
-import BlogSidebar from "@/components/blog/sidebar";
-import { useTranslations } from "next-intl";
-import Link from "next/link";
+"use server";
+import BlogSidebar from "./components/BlogSidebar";
+import BlogsWrapper from "./components/BlogsWrapper";
+import BlogBreadcumb from "./components/BlogBreadcumb";
+import { getData } from "@/services/fetchData";
 
-export const metadata = {
-  title: "Blog List v1  || Homez - Real Estate NextJS Template",
+export const fetchData = async (page = 1, pageSize) => {
+  const blogs = await getData(`/api/Blog?page=${page}&pageSize=${pageSize}`);
+  return blogs?.data;
 };
 
-const BlogV1 = () => {
-  const nav = useTranslations("nav");
+const page = async ({ searchParams }) => {
+  const page = searchParams?.page || 1;
+  const pageSize = 10;
+  const blogs = await fetchData(page, pageSize);
+
   return (
     <div className="bgc-f7 pt0-md pt70 pb-0">
-      {/* Breadcrumb Start */}
-      <section className="breadcumb-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="breadcumb-style1">
-                <h2 className="title">{nav("blog")}</h2>
-                <div className="breadcumb-list d-flex gap-1">
-                  <Link href="/">{nav("home")}</Link> <span>/</span>{" "}
-                  <span href="#">{nav("blog")}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Blog Section Area */}
+      <BlogBreadcumb />
       <section className="our-blog pt-0">
         <div className="container">
           <div className="row" data-aos="fade-up" data-aos-delay="300">
-            <div className="col-lg-8">
-              <Blog />
-              <div className="row">
-                <div className="mbp_pagination text-center">
-                  <Pagination />
-                  <p className="mt10 pagination_page_count text-center">
-                    1 – 20 of 300+ property available
-                  </p>
-                </div>
-              </div>
-              {/* End .row */}
+            <div className="">
+              {/* col-lg-8 */}
+              <BlogsWrapper pageSize={pageSize} blogs={blogs} />
             </div>
-            {/* End .col-lg-8 */}
-
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <BlogSidebar />
-            </div>
-            {/* End .col-lg-4 */}
+            </div> */}
           </div>
-          {/* End .row */}
         </div>
-        {/* End .container */}
       </section>
     </div>
   );
 };
 
-export default BlogV1;
+export default page;
